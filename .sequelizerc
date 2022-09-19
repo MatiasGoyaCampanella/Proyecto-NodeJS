@@ -1,0 +1,3 @@
+// este archivo es para configurar nuestra base de datos
+
+const path = require("path") // para trabajar con rutas 
