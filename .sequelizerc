@@ -1,12 +1,3 @@
 // este archivo es para configurar nuestra base de datos
 
 const path = require("path") // para trabajar con rutas 
-
-module.exports = {
-
-    "config": path.resolve("./src/database/config", "config.js"), // Configurar la ruta del archivo de configuación de la base de datos
-    "models-path": path.resolve("./src/database/models"), // Configurar la ruta de los modelos de la base de datos
-    "seeders-path": path.resolve("./src/database/seeders"), // Configurar la ruda de los seeders de la base de datos
-    "migrations-path": path.resolve("./src/database/migratios"), // Configurar la ruta de las migraciones de la base de datos 
-
-}
