@@ -48,6 +48,7 @@ const globalConstants = require("./const/globalConstants")
 const routerConfig = require("./routes/index.routes")
 
 
+
 const configuracionApi = (app) => {
     app.use(express.json()); // permite que el express entienda json
     app.use(express.urlencoded({ extended: true })); // permite que express entienda formularios formularios por post
@@ -57,6 +58,7 @@ const configuracionApi = (app) => {
 
 const configuracionRouter = (app) => {
     app.use("/api/", routerConfig.rutas_init())
+    
 }
 
 const init = () => {
