@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
             tipe: DataTypes.STRING, //tipo de dato
             allowNull: false //no puede ser nulo
         },
-        mail: { //nombre de la columna
+        email: { //nombre de la columna
             tipe: DataTypes.STRING, //tipo de dato
         },
         edad: { //nombre de la columna
