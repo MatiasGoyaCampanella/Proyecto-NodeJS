@@ -12,37 +12,37 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false // no permitir nulo
         },
         nombre: { //nombre de la columna
-            tipe: DataTypes.STRING, //tipo de dato
+            type: DataTypes.STRING, //tipo de dato
             allowNull: false //no puede ser nulo
         },
         apellido: { //nombre de la columna
-            tipe: DataTypes.STRING, //tipo de dato
+            type: DataTypes.STRING, //tipo de dato
             allowNull: false //no puede ser nulo
         },
         email: { //nombre de la columna
-            tipe: DataTypes.STRING, //tipo de dato
+            type: DataTypes.STRING, //tipo de dato
         },
         edad: { //nombre de la columna
-            tipe: DataTypes.INTEGER, //tipo de dato
+            type: DataTypes.INTEGER, //tipo de dato
         },
         profesion: { //nombre de la columna
             tipe: DataTypes.STRING, //tipo de dato
             allowNull: true,
         },
         createdAt: { // fecha de creación
-            tipe: DataTypes.DATE, //tipo de dato
+            type: DataTypes.DATE, //tipo de dato
             field: "created_at", //nombre de la columna
             defaultValue: DataTypes.NOW, //valor por defecto
             allowNull: false //no puede ser nulo
         },
         updatedAt: { // fecha de creación
-            tipe: DataTypes.DATE, //tipo de dato
+            type: DataTypes.DATE, //tipo de dato
             field: "updated_at", //nombre de la columna
             defaultValue: DataTypes.NOW, //valor por defecto
             allowNull: false //no puede ser nulo
         },
         deletedAt: { // fecha de creación
-            tipe: DataTypes.DATE, //tipo de dato
+            type: DataTypes.DATE, //tipo de dato
             field: "deleted_at", //nombre de la columna
         }
     }, {

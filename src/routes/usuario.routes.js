@@ -12,10 +12,11 @@ var upload = multer({ // INSTANCIAMOS MULTER Y LO CONFIGURAMOS
     limits: { fileSize: globalConstants.MAX_FILE_SIZE } // PESO MAXIMO DEL ARCHIVO 20MB
 })
 
-
+const validate = require('../middlewares/validate')
+const usuarioScheme = require('../middlewares/schemes/usuario.scheme')
 
 router.post('/subirArchivo', upload.single('jpg'), usuarioController.subirArchivo) // RUTA PARA SUBIR UN ARCHIVO
-router.post('/descargarArchivo/', usuarioController.descargarArchivo) // RUTA PARA OBTENER UN ARCHIVO
+router.post('/descargarArchivo/', usuarioController.descargarArchivo) // RUTA PARA OBTENER UN ARCHIV
 
 
 router.get('/prueba', usuarioController.prueba)
