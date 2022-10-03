@@ -42,23 +42,30 @@ console.log("Servidor corriendo en el puerto 5000");
 
 */
 
-const express = require("express")
+const express = require("express") // importar express
 
-const globalConstants = require("./const/globalConstants")
-const routerConfig = require("./routes/index.routes")
+const globalConstants = require("./const/globalConstants")// importar el archivo de rutas
+const routerConfig = require("./routes/index.routes") //  importar el archivo de constantes globales
+
+const errorHandler = ('./middlewares/error')
+let createError = require('http-errors')
 
 
 
-const configuracionApi = (app) => {
+const configuracionApi = (app) => { // configurar la api
     app.use(express.json()); // permite que el express entienda json
     app.use(express.urlencoded({ extended: true })); // permite que express entienda formularios formularios por post
 
     return;
 }
 
-const configuracionRouter = (app) => {
-    app.use("/api/", routerConfig.rutas_init())
+const configuracionRouter = (app) => { // configurar las rutas
+    app.use("/api/", routerConfig.rutas_init()) // para acceder a las rutas de la api siempre deberá empezar con /api/
     
+  app.use(function (req, res, next) {
+    next(createError(404)) // si no se encuentra la ruta, se envia error 404
+  })
+    app.use(errorHandler)
 }
 
 const init = () => {

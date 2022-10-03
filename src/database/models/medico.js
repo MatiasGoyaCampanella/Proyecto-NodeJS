@@ -49,6 +49,7 @@ module.exports = (sequelize, DataTypes) => {
         freezeTableName: true, //no va a modificar el nombre de la tabla a plural
 }) 
 Medico.associate = models => {
+    Medico.belongsTo(models.medico)
     //acá se relacionan las tablas
 }
 
